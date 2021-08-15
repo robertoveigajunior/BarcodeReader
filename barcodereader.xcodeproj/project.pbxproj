@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620EB37A26C89239002E0C88 /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620EB37926C89239002E0C88 /* BarcodeData.swift */; };
+		620EB37D26C8996C002E0C88 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620EB37C26C8996C002E0C88 /* BarcodeScannerView.swift */; };
+		620EB38026C8E9F6002E0C88 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620EB37F26C8E9F6002E0C88 /* BarcodeScannerViewController.swift */; };
+		620EB38826C8F3B5002E0C88 /* barcodereaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620EB38726C8F3B5002E0C88 /* barcodereaderTests.swift */; };
 		62798F0B26C84FF900889398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62798F0A26C84FF900889398 /* AppDelegate.swift */; };
 		62798F0D26C84FF900889398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62798F0C26C84FF900889398 /* SceneDelegate.swift */; };
-		62798F0F26C84FF900889398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62798F0E26C84FF900889398 /* ViewController.swift */; };
 		62798F1226C84FF900889398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62798F1026C84FF900889398 /* Main.storyboard */; };
 		62798F1426C84FFA00889398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62798F1326C84FFA00889398 /* Assets.xcassets */; };
 		62798F1726C84FFA00889398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62798F1526C84FFA00889398 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		620EB38A26C8F3B5002E0C88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62798EFF26C84FF900889398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62798F0626C84FF900889398;
+			remoteInfo = barcodereader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		620EB37926C89239002E0C88 /* BarcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
+		620EB37C26C8996C002E0C88 /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		620EB37F26C8E9F6002E0C88 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		620EB38526C8F3B5002E0C88 /* barcodereaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barcodereaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		620EB38726C8F3B5002E0C88 /* barcodereaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcodereaderTests.swift; sourceTree = "<group>"; };
+		620EB38926C8F3B5002E0C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62798F0726C84FF900889398 /* barcodereader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodereader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62798F0A26C84FF900889398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62798F0C26C84FF900889398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62798F0E26C84FF900889398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62798F1126C84FF900889398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62798F1326C84FFA00889398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62798F1626C84FFA00889398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		620EB38226C8F3B5002E0C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62798F0426C84FF900889398 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +62,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620EB37826C869E8002E0C88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				620EB37926C89239002E0C88 /* BarcodeData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		620EB37B26C89869002E0C88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				620EB37C26C8996C002E0C88 /* BarcodeScannerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		620EB37E26C8E9AB002E0C88 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				62798F1026C84FF900889398 /* Main.storyboard */,
+				620EB37F26C8E9F6002E0C88 /* BarcodeScannerViewController.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		620EB38626C8F3B5002E0C88 /* barcodereaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				620EB38726C8F3B5002E0C88 /* barcodereaderTests.swift */,
+				620EB38926C8F3B5002E0C88 /* Info.plist */,
+			);
+			path = barcodereaderTests;
+			sourceTree = "<group>";
+		};
 		62798EFE26C84FF900889398 = {
 			isa = PBXGroup;
 			children = (
 				62798F0926C84FF900889398 /* barcodereader */,
+				620EB38626C8F3B5002E0C88 /* barcodereaderTests */,
 				62798F0826C84FF900889398 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				62798F0726C84FF900889398 /* barcodereader.app */,
+				620EB38526C8F3B5002E0C88 /* barcodereaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +117,11 @@
 		62798F0926C84FF900889398 /* barcodereader */ = {
 			isa = PBXGroup;
 			children = (
+				620EB37E26C8E9AB002E0C88 /* Example */,
+				620EB37B26C89869002E0C88 /* View */,
+				620EB37826C869E8002E0C88 /* Model */,
 				62798F0A26C84FF900889398 /* AppDelegate.swift */,
 				62798F0C26C84FF900889398 /* SceneDelegate.swift */,
-				62798F0E26C84FF900889398 /* ViewController.swift */,
-				62798F1026C84FF900889398 /* Main.storyboard */,
 				62798F1326C84FFA00889398 /* Assets.xcassets */,
 				62798F1526C84FFA00889398 /* LaunchScreen.storyboard */,
 				62798F1826C84FFA00889398 /* Info.plist */,
@@ -70,6 +132,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		620EB38426C8F3B5002E0C88 /* barcodereaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 620EB38C26C8F3B5002E0C88 /* Build configuration list for PBXNativeTarget "barcodereaderTests" */;
+			buildPhases = (
+				620EB38126C8F3B5002E0C88 /* Sources */,
+				620EB38226C8F3B5002E0C88 /* Frameworks */,
+				620EB38326C8F3B5002E0C88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				620EB38B26C8F3B5002E0C88 /* PBXTargetDependency */,
+			);
+			name = barcodereaderTests;
+			productName = barcodereaderTests;
+			productReference = 620EB38526C8F3B5002E0C88 /* barcodereaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		62798F0626C84FF900889398 /* barcodereader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62798F1B26C84FFA00889398 /* Build configuration list for PBXNativeTarget "barcodereader" */;
@@ -96,6 +176,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					620EB38426C8F3B5002E0C88 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 62798F0626C84FF900889398;
+					};
 					62798F0626C84FF900889398 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -115,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				62798F0626C84FF900889398 /* barcodereader */,
+				620EB38426C8F3B5002E0C88 /* barcodereaderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		620EB38326C8F3B5002E0C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62798F0526C84FF900889398 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,17 +225,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		620EB38126C8F3B5002E0C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				620EB38826C8F3B5002E0C88 /* barcodereaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62798F0326C84FF900889398 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62798F0F26C84FF900889398 /* ViewController.swift in Sources */,
+				620EB38026C8E9F6002E0C88 /* BarcodeScannerViewController.swift in Sources */,
 				62798F0B26C84FF900889398 /* AppDelegate.swift in Sources */,
+				620EB37A26C89239002E0C88 /* BarcodeData.swift in Sources */,
 				62798F0D26C84FF900889398 /* SceneDelegate.swift in Sources */,
+				620EB37D26C8996C002E0C88 /* BarcodeScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		620EB38B26C8F3B5002E0C88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62798F0626C84FF900889398 /* barcodereader */;
+			targetProxy = 620EB38A26C8F3B5002E0C88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		62798F1026C84FF900889398 /* Main.storyboard */ = {
@@ -165,6 +275,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		620EB38D26C8F3B5002E0C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRXY7Q4555;
+				INFOPLIST_FILE = barcodereaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.robertoveigajunior.barcodereaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barcodereader.app/barcodereader";
+			};
+			name = Debug;
+		};
+		620EB38E26C8F3B5002E0C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRXY7Q4555;
+				INFOPLIST_FILE = barcodereaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.robertoveigajunior.barcodereaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barcodereader.app/barcodereader";
+			};
+			name = Release;
+		};
 		62798F1926C84FFA00889398 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		620EB38C26C8F3B5002E0C88 /* Build configuration list for PBXNativeTarget "barcodereaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				620EB38D26C8F3B5002E0C88 /* Debug */,
+				620EB38E26C8F3B5002E0C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		62798F0226C84FF900889398 /* Build configuration list for PBXProject "barcodereader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

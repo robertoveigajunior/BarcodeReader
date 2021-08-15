@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>O uso da câmera é necessário para a leitura do código de barras</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>O uso do álbum de fotos é necessário para a leitura do código de barras</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
