@@ -78,15 +78,11 @@ extension BarcodeScannerView {
             captureSession?.addOutput(metadataOutput)
             
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.code128,
-                                                  .code39,
-                                                  .upce,
-                                                  .code39Mod43,
-                                                  .pdf417,
+            metadataOutput.metadataObjectTypes = [.pdf417,
                                                   .ean13,
                                                   .ean8,
-                                                  .interleaved2of5,
-                                                  .itf14]
+                                                  .interleaved2of5
+]
         } else {
             scanningDidFail()
             return

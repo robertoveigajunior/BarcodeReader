@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ba3-do-puC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,31 +8,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Inicial Table View Controller-->
+        <scene sceneID="rre-ts-qIl">
+            <objects>
+                <tableViewController id="oRl-gc-43J" customClass="InicialTableViewController" customModule="barcodereader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oel-1u-6qx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buttonCell" id="XU7-kP-Otp">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XU7-kP-Otp" id="8jx-L4-tb6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oRl-gc-43J" id="sJa-D1-6SN"/>
+                            <outlet property="delegate" destination="oRl-gc-43J" id="bL3-xd-mfJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="WCc-aM-878"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nu5-T0-BFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="150"/>
+        </scene>
         <!--Barcode Scanner View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BarcodeScannerViewController" customModule="barcodereader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarcodeScannerViewController" id="BYZ-38-t0r" customClass="BarcodeScannerViewController" customModule="barcodereader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVv-MZ-yVK" customClass="BarcodeScannerView" customModule="barcodereader" customModuleProvider="target">
                                 <rect key="frame" x="26" y="83" width="357" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ymd-Dd-e77"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OQ-aQ-dMZ">
+                                <rect key="frame" x="26" y="219" width="357" height="250"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6OQ-aQ-dMZ" firstAttribute="leading" secondItem="jVv-MZ-yVK" secondAttribute="leading" id="7qu-gD-13Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jVv-MZ-yVK" secondAttribute="trailing" constant="31" id="Cc7-WQ-KJQ"/>
+                            <constraint firstItem="6OQ-aQ-dMZ" firstAttribute="top" secondItem="jVv-MZ-yVK" secondAttribute="bottom" constant="8" id="OsV-hF-NBk"/>
                             <constraint firstItem="jVv-MZ-yVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="bLk-Yr-ts7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6OQ-aQ-dMZ" secondAttribute="bottom" constant="393" id="ktB-Wa-9iy"/>
+                            <constraint firstItem="6OQ-aQ-dMZ" firstAttribute="trailing" secondItem="jVv-MZ-yVK" secondAttribute="trailing" id="p4H-ih-569"/>
                             <constraint firstItem="jVv-MZ-yVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="rv9-yk-PjX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9tq-3r-mek"/>
                     <connections>
+                        <outlet property="labelBarcodeReader" destination="6OQ-aQ-dMZ" id="PCn-al-r7l"/>
                         <outlet property="scannerView" destination="jVv-MZ-yVK" id="dp4-Ih-DTI"/>
                     </connections>
                 </viewController>
@@ -40,10 +80,73 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
+        <!--File Reader View Controller-->
+        <scene sceneID="aia-h3-NX1">
+            <objects>
+                <viewController storyboardIdentifier="FileReaderViewController" id="oWB-KN-xMi" customClass="FileReaderViewController" customModule="barcodereader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQN-AL-v61">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-oP-W82" customClass="BarcodeScannerView" customModule="barcodereader" customModuleProvider="target">
+                                <rect key="frame" x="29" y="64" width="356" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="tM8-pb-qxf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTw-ge-8hd">
+                                <rect key="frame" x="29" y="200" width="356" height="250"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e2J-PL-kbg"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="vBD-oP-W82" firstAttribute="leading" secondItem="e2J-PL-kbg" secondAttribute="leading" constant="29" id="3y3-tM-cKP"/>
+                            <constraint firstItem="e2J-PL-kbg" firstAttribute="bottom" secondItem="yTw-ge-8hd" secondAttribute="bottom" constant="412" id="CDF-OM-8qp"/>
+                            <constraint firstItem="vBD-oP-W82" firstAttribute="top" secondItem="e2J-PL-kbg" secondAttribute="top" constant="20" id="EHq-VO-H0R"/>
+                            <constraint firstItem="yTw-ge-8hd" firstAttribute="leading" secondItem="vBD-oP-W82" secondAttribute="leading" id="Rlm-VB-oO2"/>
+                            <constraint firstItem="yTw-ge-8hd" firstAttribute="trailing" secondItem="vBD-oP-W82" secondAttribute="trailing" id="aUX-6L-7eY"/>
+                            <constraint firstItem="yTw-ge-8hd" firstAttribute="top" secondItem="vBD-oP-W82" secondAttribute="bottom" constant="8" id="cDP-le-mXi"/>
+                            <constraint firstItem="vBD-oP-W82" firstAttribute="centerX" secondItem="FQN-AL-v61" secondAttribute="centerX" id="r3Z-Wh-Zcr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lkR-Jf-itq"/>
+                    <connections>
+                        <outlet property="labelBarcodeReader" destination="yTw-ge-8hd" id="hth-fh-6dM"/>
+                        <outlet property="viewDocument" destination="vBD-oP-W82" id="T0O-sr-nzB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhV-s8-jTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="837"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AVj-5S-EHS">
+            <objects>
+                <navigationController id="ba3-do-puC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cZP-Eq-Lby">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oRl-gc-43J" kind="relationship" relationship="rootViewController" id="eo6-7l-pMS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k7X-ur-iJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1557" y="138"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
